@@ -120,9 +120,10 @@ debugObject.envMapIntensity = 2.5;
 /**
  * Models
  */
-gltfLoader.load("/models/DamagedHelmet/glTF/DamagedHelmet.gltf", (gltf) => {
-  gltf.scene.scale.set(2.5, 2.5, 2.5);
-  gltf.scene.rotation.y = Math.PI * 0.5;
+gltfLoader.load("/models/human_heart_cross_section_model.glb", (gltf) => {
+  gltf.scene.scale.set(40, 40, 40);
+  gltf.scene.rotation.y = Math.PI  ;
+  gltf.scene.position.y += -2;
   scene.add(gltf.scene);
 
   updateAllMaterials();
@@ -134,15 +135,15 @@ gltfLoader.load("/models/DamagedHelmet/glTF/DamagedHelmet.gltf", (gltf) => {
 const raycaster = new THREE.Raycaster();
 const points = [
   {
-    position: new THREE.Vector3(1.55, 0.3, -0.6),
-    element: document.querySelector(".point-0"),
-  },
-  {
-    position: new THREE.Vector3(0.5, 0.8, -1.6),
+    position: new THREE.Vector3(0.5, 1.5, 0.5),
     element: document.querySelector(".point-1"),
   },
   {
-    position: new THREE.Vector3(1.6, -1.3, -0.7),
+    position: new THREE.Vector3(0.6, 0.7, -0.5),
+    element: document.querySelector(".point-0"),
+  },
+  {
+    position: new THREE.Vector3(0.6, -1.3, -0.7),
     element: document.querySelector(".point-2"),
   },
 ];
